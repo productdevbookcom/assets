@@ -19,7 +19,7 @@ else
     sudo apt update
     sudo apt install wget
 
-    exec bash
+    
 fi
 
 # Install curl
@@ -33,7 +33,7 @@ else
     sudo apt update
     sudo apt install curl
     
-    exec bash
+    
 fi
 
 # Install Git
@@ -47,7 +47,7 @@ else
     sudo apt update
     sudo apt install git
 
-    exec bash
+    
 fi
 
 
@@ -62,7 +62,7 @@ else
     sudo apt update
     sudo apt install snapd
 
-    exec bash
+    
 fi
 
 # Install Visual Studio Code
@@ -75,7 +75,7 @@ else
 
     sudo snap install code --classic
 
-    exec bash
+    
 fi
 
 # Install Google Chrome
@@ -93,7 +93,7 @@ else
     sudo apt update
     sudo apt install google-chrome-stable
 
-    exec bash
+    
 fi
 
 # Install Node.js
@@ -108,7 +108,7 @@ else
     sudo apt-get install -y nodejs
     node -v
 
-    exec bash
+    
 fi
 
 # Install Pnpm
@@ -129,7 +129,7 @@ else
     # export PATH="$PATH:~/.local/share/pnpm"
     echo 'export PATH="$PNPM_HOME:$PATH"' >> ~/.bashrc
 
-    exec bash
+    
 fi
 
 # Install Htop
@@ -143,7 +143,7 @@ else
     sudo apt update
     sudo snap install htop
     
-    exec bash
+    
 fi
 
 # Android Studio
@@ -170,7 +170,7 @@ else
     echo 'export ANDROID_EMULATOR_HOME=$HOME/.android' >> ~/.bashrc
     echo 'export ANDROID_AVD_HOME=$HOME/.android/avd' >> ~/.bashrc
 
-    exec bash
+    
 fi
 
 
@@ -189,7 +189,7 @@ else
 
     echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
-    exec bash
+    
 fi
 
 # Install Beekeeper Studio
@@ -202,7 +202,7 @@ else
 
     sudo snap install beekeeper-studio
 
-    exec bash
+    
 fi
 
 
@@ -216,7 +216,7 @@ else
 
     curl -fsSL https://bun.sh/install | bash
 
-    exec bash
+    
 fi
 
 # Brew
@@ -232,7 +232,7 @@ else
     # Add Brew to PATH
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
 
-    exec bash
+    
 fi
 
 # Ruby
@@ -249,7 +249,7 @@ else
 
     echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
 
-    exec bash
+    
 fi
 
 # Fastlane
@@ -262,7 +262,7 @@ else
 
     brew install fastlane
     
-    exec bash
+    
 fi
 
 
