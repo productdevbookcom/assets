@@ -10,7 +10,7 @@ sudo apt autoclean
 
 # Install Wget
 
-if command -v wget &> /dev/null
+if [ -x "$(command -v wget)" ]
 then
     echo "Wget is already installed"
 else
@@ -24,7 +24,7 @@ fi
 
 # Install curl
 
-if command -v curl &> /dev/null
+if [ -x "$(command -v curl)" ]
 then
     echo "Curl is already installed"
 else
@@ -38,7 +38,7 @@ fi
 
 # Install Git
 
-if command -v git &> /dev/null
+if [ -x "$(command -v git)" ]
 then
     echo "Git is already installed"
 else
@@ -53,7 +53,7 @@ fi
 
 # Install snap
 
-if command -v snap &> /dev/null
+if [ -x "$(command -v snap)" ]
 then
     echo "Snap is already installed"
 else
@@ -67,7 +67,7 @@ fi
 
 # Install Visual Studio Code
 
-if command -v code &> /dev/null
+if [ -x "$(command -v code)" ]
 then
     echo "Visual Studio Code is already installed"
 else
@@ -80,7 +80,7 @@ fi
 
 # Install Google Chrome
 
-if command -v google-chrome &> /dev/null
+if [ -x "$(command -v google-chrome)" ] 
 then
     echo "Google Chrome is already installed"
 else
@@ -98,7 +98,7 @@ fi
 
 # Install Node.js
 
-if command -v node &> /dev/null
+if [ -x "$(command -v node)" ]
 then
     echo "Node.js is already installed"
 else
@@ -113,7 +113,7 @@ fi
 
 # Install Pnpm
 
-if command -v pnpm &> /dev/null
+if [ -x "$(command -v pnpm)" ]
 then
     echo "Pnpm is already installed"
 else
@@ -134,7 +134,7 @@ fi
 
 # Install Htop
 
-if command -v htop &> /dev/null
+if [ -x "$(command -v htop)" ]
 then
     echo "Htop is already installed"
 else
@@ -148,7 +148,7 @@ fi
 
 # Android Studio
 
-if command -v android-studio &> /dev/null
+if [ -x "$(command -v android-studio)" ]
 then
     echo "Android Studio is already installed"
 else
@@ -176,7 +176,7 @@ fi
 
 # Install Starship
 
-if command -v starship &> /dev/null
+if [ -x "$(command -v starship)" ]
 then
     echo "Starship is already installed"
 else
@@ -194,7 +194,7 @@ fi
 
 # Install Beekeeper Studio
 
-if command -v beekeeper-studio &> /dev/null
+if [ -x "$(command -v beekeeper-studio)" ]
 then
     echo "Beekeeper Studio is already installed"
 else
@@ -208,7 +208,7 @@ fi
 
 # Install Bun
 
-if command -v bun &> /dev/null
+if [ -x "$(command -v bun)" ]
 then
     echo "Bun is already installed"
 else
@@ -221,7 +221,7 @@ fi
 
 # Brew
 
-if command -v brew &> /dev/null
+if [ -x "$(command -v brew)" ]
 then
     echo "Brew is already installed"
 else
@@ -237,7 +237,7 @@ fi
 
 # Ruby
 
-if command -v ruby &> /dev/null
+if [ -x "$(command -v ruby)" ]
 then
     echo "Ruby is already installed"
 else
@@ -254,7 +254,7 @@ fi
 
 # Fastlane
 
-if command -v fastlane &> /dev/null
+if [ -x "$(command -v fastlane)" ]
 then
     echo "Fastlane is already installed"
 else
@@ -268,7 +268,7 @@ fi
 
 # Install Docker Desktop
 
-if command -v docker &> /dev/null
+if [ -x "$(command -v docker)" ]
 then
     echo "Docker Desktop is already installed"
 else
@@ -299,7 +299,7 @@ else
 
     echo \
     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.lis
 
     echo "Installing Docker Desktop"
     curl -fsSL -o /tmp/docker-desktop-amd64.deb https://desktop.docker.com/linux/main/amd64/docker-desktop-4.16.2-amd64.deb
@@ -310,7 +310,7 @@ else
     sudo apt-get update
 
     # Validate current $USER is enabled for docker group
-    if ! (groups | grep docker > /dev/null); then
+    if ! (groups | grep docke); then
       echo "Add $USER to docker group by running the following:"
       echo "----"
       echo ""
